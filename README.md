@@ -1,4 +1,4 @@
-# 序列帧转 webp + apng 动画小工具
+# Fast MP4 and GIF encoder
 这是个帮助转换视频文件为 MP4 和 GIF 格式的 Mac Automator 服务。 
 修正了 H264 格式 MP4 转换后色差过大的问题。
 主程序为 FFMPEG   
