@@ -1,6 +1,7 @@
 # Fast MP4 and GIF encoder
 这是个帮助转换视频文件为 MP4 和 GIF 格式的 Mac Automator 服务。   
 修正了 H264 格式 MP4 转换后色差过大的问题。  
+** 本工具转换的 GIF 不支持透明度 **
 主程序为 FFMPEG   
 https://ffmpeg.org/
 
