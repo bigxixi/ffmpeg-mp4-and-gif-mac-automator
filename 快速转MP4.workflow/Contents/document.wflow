@@ -161,7 +161,7 @@ if  ( [ -f $ffmpeg ] ) ; then
     # 输出路径
         output_name="$dir_path"/"$input_name"_new.mp4
     # 压制参数
-        "$ffmpeg" -i "$f" -c:v libx264 -pix_fmt yuv420p -crf "$crf" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2,colormatrix=bt601:bt709,format=rgb24" -c:a aac -strict -2 "$output_name" -y
+        "$ffmpeg" -i "$f" -crf "$crf" -vf 'scale=trunc(iw/2)*2:trunc(ih/2)*2:out_color_matrix=bt709:flags=full_chroma_int+accurate_rnd,format=yuv420p' -color_primaries 1 -color_trc 1 -colorspace 1 -c:a aac -strict -2 "$output_name" -y
     # 循环结束
     done
     # 放个通知告诉你压完了
